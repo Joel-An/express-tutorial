@@ -3,7 +3,7 @@ module.exports = (app, fs) => {
         res.render('index', {
             title: "My HomePage",
             length: 5
-        })
+        });
     });
 
     app.get('/list', (req, res) => {
@@ -11,6 +11,6 @@ module.exports = (app, fs) => {
             console.log( data );
             res.end( data );
         });        
-    })
+    });
 
 }

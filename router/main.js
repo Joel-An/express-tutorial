@@ -13,4 +13,11 @@ module.exports = (app, fs) => {
         });        
     });
 
+    app.get('/getUser/:username', (req, res) => {
+        fs.readFile(__dirname + "/../data/user.json", 'utf8', (err, data) => {
+            var users = JSON.parse(data);
+            res.json(users[req.params.username]);
+        });
+    });
+
 }

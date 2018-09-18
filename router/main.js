@@ -5,4 +5,12 @@ module.exports = (app, fs) => {
             length: 5
         })
     });
+
+    app.get('/list', (req, res) => {
+        fs.readFile(__dirname + "/../data/" + "user.json", 'utf8', (err, data) => {
+            console.log( data );
+            res.end( data );
+        });        
+    })
+
 }

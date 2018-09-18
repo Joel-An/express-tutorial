@@ -6,3 +6,10 @@
         </li>
     <% } %>
 </ul>
+
+
+<% if(username) { %>
+    <h2>Wellcome! <%= username %> (name: <%= name %>)</h2>
+<% } else { %>
+    <h2>Please Login</h2>    
+<% } %>
